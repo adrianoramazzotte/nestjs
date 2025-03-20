@@ -6,7 +6,7 @@ import { IsNomeUnico } from 'src/validators/is-nome-unique.validator';
 
 export class CreateUsuarioDto {
  // @IsNomeUnique({ message: 'Nome de usuário já ' })
-  // @IsNomeUnico()
+  @IsNomeUnico()
   @IsNotEmpty()
   @Length(3, 255)
   nome: string;
